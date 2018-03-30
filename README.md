@@ -1,10 +1,12 @@
 # Dekel Pilli
   
-Bentleigh East, 3165  
-M: 0401 995 442   
-dekelpilli@gmail.com
+<div style="text-align: right">
+  <p>Bentleigh East, 3165</p>  
+  <p>M: 0401 995 442</p>
+  <p>dekelpilli@gmail.com</p>
+</div>
 
-## Programming Languages & Tools:  
+## Programming Languages & Tools  
 I enjoy learning new languages. During my studies and employment, I have used, and often independently learned, the following languages:  
 * Python  
 * Java (including Android development)  
