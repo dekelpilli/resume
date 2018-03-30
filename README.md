@@ -5,26 +5,26 @@ M: 0401 995 442
 dekelpilli@gmail.com
 
 ## Programming Languages & Tools:  
-I enjoy learning new languages. During my studies and employment, I have used, and often independently learned, the following languages:
-* Python
-* Java (including Android development)
-* C
-* C#
-* Javascript (including NodeJS and AngularJS)
-* HTML
-* Perl
-* PHP
+I enjoy learning new languages. During my studies and employment, I have used, and often independently learned, the following languages:  
+* Python  
+* Java (including Android development)  
+* C  
+* C#  
+* Javascript (including NodeJS and AngularJS)  
+* HTML  
+* Perl  
+* PHP  
   
-In addition to these languages, I have used and developed alongside the following tools and databases:
-* SQL
-* Firebase
-* DynamoDB
-* AWS
-* Trello
-* Harvest 
-* Slack 
-* git
-* SVN 
+In addition to these languages, I have used and developed alongside the following tools and databases:  
+* SQL  
+* Firebase  
+* DynamoDB  
+* AWS  
+* Trello  
+* Harvest  
+* Slack  
+* git  
+* SVN  
 
 ## Achievements – University projects
 * Scored a High Distinction for my work as QA lead in a 5-man group working on our full year capstone project with the [Online Hate Prevention Institute](http://ohpi.org.au).  
