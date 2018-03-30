@@ -1,7 +1,8 @@
 # Dekel Pilli
-###### Bentleigh East, 3165  
-###### M: 0401 995 442 
-###### dekelpilli@gmail.com
+  
+Bentleigh East, 3165  
+M: 0401 995 442   
+dekelpilli@gmail.com
 
 ## Programming Languages & Tools:  
 I enjoy learning new languages. During my studies and employment, I have used, and often independently learned, the following languages:
