@@ -19,8 +19,11 @@ jobs:
           path: resume.pdf
       - id: date
         run: |
-          echo "::set-output name=date::$(/bin/date -u "+%Y-%m-%d %H:%M:%S")"
+          echo "::set-output name=date::$(date -u "+%Y-%m-%d %H:%M:%S")"
+      - run: |
+          git tag latest
       - uses: softprops/action-gh-release@v1
         with:
           name: ${{ steps.date.outputs.date }}
+          tag: latest
           files: resume.pdf
