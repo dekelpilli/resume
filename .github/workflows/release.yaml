@@ -17,11 +17,12 @@ jobs:
         with:
           name: resume
           path: resume.pdf
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Australia/Melbourne"
       - id: date
         run: |
           echo "::set-output name=date::$(date -u "+%Y-%m-%d %H:%M:%S")"
-        env:
-          TZ: Australia/Melbourne
       - run: |
           git tag --delete latest || true
           git tag latest
