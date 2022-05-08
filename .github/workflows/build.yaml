@@ -13,8 +13,14 @@ jobs:
       - uses: dante-ev/latex-action@latest
         with:
           root_file: resume.tex
-      - run: ls -a
       - uses: actions/upload-artifact@v3
         with:
           name: resume
           path: resume.pdf
+      - id: date
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y-%m-%d %H:%M:%S")"
+      - uses: softprops/action-gh-release@v1
+        with:
+          name: ${{ steps.date.outputs.date }}
+          files: resume.pdf
