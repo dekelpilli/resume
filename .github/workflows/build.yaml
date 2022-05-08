@@ -1,0 +1,20 @@
+name: publish-resume
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-resume-pdf:
+    name: build-resume-pdf
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dante-ev/latex-action@latest
+        with:
+          root_file: resume.tex
+      - run: ls -a
+      - uses: actions/upload-artifact@v3
+        with:
+          name: resume
+          path: resume.pdf
