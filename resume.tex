@@ -1,26 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Graduate Curriculum Vitae
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
-%
-% Important note:
-% This template requires the res.cls file to be in the same directory as the
-% .tex file. The res.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[margin, 11pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\documentclass[margin, 11pt]{style}
 
 \usepackage{helvet} % Default font is the helvetica postscript font
 %\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
@@ -31,26 +9,16 @@
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	NAME AND ADDRESS SECTION
-%----------------------------------------------------------------------------------------
+\moveleft.5\hoffset\centerline{\large\bf Dekel Pilli}
 
-\moveleft.5\hoffset\centerline{\large\bf Dekel Pilli} % Your name at the top
- 
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
-\moveleft.5\hoffset\centerline{Melbourne, 3000}
-\moveleft.5\hoffset\centerline{Ph: 0401 995 442; E: dekelpilli@gmail.com}
-%\moveleft.5\hoffset\centerline{dekelpilli@gmail.com}
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+\moveleft.5\hoffset\centerline{Melbourne, Australia}
+\moveleft.5\hoffset\centerline{Ph: (+61) 401 995 442; E: dekelpilli@gmail.com}
 
-%----------------------------------------------------------------------------------------
 
 \begin{resume}
 
-%----------------------------------------------------------------------------------------
-%	Technology SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{TECHNOLOGY \\ SKILLS} 
+\section{TECHNOLOGY \\ SKILLS}
 \begin{itemize}
 
 \item \textbf{Proficient Programming Languages:} Clojure, Java, Python, Terraform.
@@ -58,31 +26,26 @@
 \item \textbf{Technologies Used:}
 \begin{itemize}
 \item \textbf{SQL:} PostgreSQL, SQL Server, MySQL, MySQL Aurora
-\item \textbf{noSQL/KV:} ScyllaDB, DynamoDB, Redis, RocksDB
+\item \textbf{noSQL/KV:} Aerospike, ScyllaDB, DynamoDB, Redis, RocksDB
 \item \textbf{Frameworks:}  Spring (Java), Tokio (Rust)
-\item \textbf{Messaging:} Redis, SQS, ActiveMQ, SNS, Kafka
+\item \textbf{Messaging:} Redis, SQS, ActiveMQ, SNS, Kafka, Vector(.dev)
 \item \textbf{Storage:} SFTP, S3, Minio
 \item \textbf{CI:} Jenkins, Github Actions, Gitlab CI
-\item \textbf{Environment management \& runtimes:} Docker, Nomad, Consul, various AWS tools (ECS Fargate, SSM, Lambda, Step Functions, Glue, EC2), Tomcat
-\item Comfortable working on Linux, OSX, and Windows operating systems. 
+\item \textbf{Runtime environments:} Docker, Nomad, Consul, various AWS tools (ECS Fargate, Lambda, Step Functions, Glue, EC2), Tomcat
+\item Comfortable working on macOS \& Linux operating systems.
 \end{itemize}
 \end{itemize}
- 
-%----------------------------------------------------------------------------------------
-%	PROFESSIONAL EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
 
 \section{EXPERIENCE}
-\textbf{Software Engineer} \hfill September 2020 - Present \\
-{\sl Core0/Kakku}
-\vspace{15pt}\\
+{\sl Core0} \textbf{(Software Engineer)} \hfill September 2020 - Present \\
+
+\vspace{15pt}
 %TODO
 
-\textbf{Software Engineer} \hfill August 2019 - September 2020 \\
-{\sl Littlepay}
+{\sl Littlepay} \textbf{(Software Engineer)} \hfill August 2019 - September 2020 \\
 
 \begin{itemize}
-\item Integration with several acquirers, mainly using ISO8583, and PCI-compliant handling of cardholder data.
+\item Integration with several acquiring banks, mainly using ISO8583, and PCI-compliant handling of cardholder data.
 \item Analytics platform ownership, including design, development, production deployments, and support.
 \item Process and tool improvement through POCs and implementation thereafter.
 
@@ -99,24 +62,23 @@
 \end{itemize}
 
 
-\textbf{Graduate Developer} \hfill May 2018 - August 2019 \\
-{\sl Intelematics Australia}
+{\sl Intelematics} \textbf{(Graduate Developer)} \hfill May 2018 - August 2019 \\
 \vspace{15pt}\\
 \textbf{Key Responsibilities}
 
 \begin{itemize}
 \item Gained experience with a large variety of applications and development styles, ranging from legacy systems to new cloud-based applications.
-\item Database refactor leading to the removal of over a terrabyte of indexes and hundreds of tables and stored procedures. This also resulted in significantly improved performance for end users.
+\item Refactor and optimisation of a SQL Server database, resulting in significantly improved performance.
 \item Actively challenged myself to work with new technologies, including CI with Jenkins and Spinnaker, and Infrastructure as Code with Terraform.
 
-\end{itemize} 
+\end{itemize}
 
 \textbf{Key Achievements}
 
 \begin{itemize}
 
 \item Was a major contributor to a cloud-hosted webapp that integrated a variety of AWS services to provide a set of REST endpoints that significantly outperformed their on-premises, SQL-based equivalents.
-\item Single-handedly designed and implemented a major business logic refactor in a legacy system, satisfying all stakeholders and substantially improving the quality of our data. 
+\item Single-handedly designed and implemented a major business logic refactor in a legacy system, satisfying all stakeholders and substantially improving the quality of our data.
 \item Subject matter expert for several microservices.
 
 
@@ -126,56 +88,21 @@
 \textbf{Software Engineer} \hfill February 2018 - October 2018 \\
 {\sl Online Hate Prevention Institute}
 \vspace{15pt}\\
-Casual position as a software engineer. The position was offered to me by the Institute CEO after completion of the University capstone project with them in 2017. The work is on a different project to the one from University and is focused on extending the functionality and improving the code quality of an existing system using Spring MVC.
+Casual position offered after completion of the university capstone project. Liaised with the CEO to develop and deploy a Spring-based CRUD monolith.
 
+\section{PORTFOLIO}
 
+My personal projects are available \underline{\color{blue}{\href{https://github.com/dekelpilli?tab=repositories}{here}}}.
 
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%---------------------------------------------------------------------------------------- 
-
-\section{EDUCATION}
+\section{ELIGIBILITY \\ \& REFERENCES}
 
 \begin{itemize}
 
-\item Graduated from  Monash University with a Bachelor of Software Engineering.
-\item Completed year 12 VCE at McKinnon Secondary College, having studied Specialist  Mathematics, Information Technology Applications, Physics, English, Mathematical Methods, and Hebrew.
+\item Bachelor of Software Engineering from Monash University.
+\item I am an Australian citizen, and my references are available upon request.
+
 
 \end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	OTHER JOBS AND VOLUNTEERING SECTION
-%----------------------------------------------------------------------------------------
-
-\section{OTHER JOBS} 
-
-\begin{itemize} \itemsep -11pt
-
-\item EA Sports FIFA, {\sl Managing Editor} \hfill 2014 - 2017\\
-\item Monash Computer Games Boot Camp, {\sl Volunteer} \hfill 2016 \\
-\item EA Sports FIFA, {\sl Data Reviewer} \hfill 2013 - 2014 \\
- 
-\end{itemize}
-
-
-%----------------------------------------------------------------------------------------
-%	PORTFOLIO SECTION
-%----------------------------------------------------------------------------------------
-
-
-\section{PORTFOLIO} 
-
-My works from third year University onwards, including personal projects and open source contributions, are available \underline{\color{blue}{\href{https://github.com/dekelpilli?tab=repositories}{here}}}.
-
-
-
-%----------------------------------------------------------------------------------------
-
-
-\section{ELIGIBILITY \\ \& REFERENCES} 
-
-I am an Australian citizen, and my references are available upon request.
 
 \end{resume}
 \end{document}
