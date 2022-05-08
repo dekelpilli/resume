@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y tzdata
-          echo "::set-output name=date::$(date -I)"
+          echo "::set-output name=date::$(date -u "+%Y-%m-%dT%H:%M:%S")"
         env:
           TZ: Australia/Melbourne
           DEBIAN_FRONTEND: noninteractive
