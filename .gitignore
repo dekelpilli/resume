@@ -6,3 +6,5 @@ resume.html
 *.fls
 *.gz
 .DS_Store
+*.pdf
+*.dvi
