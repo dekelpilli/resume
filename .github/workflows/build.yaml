@@ -19,7 +19,7 @@ jobs:
           path: resume.pdf
       - id: date
         run: |
-          echo "::set-output name=date::$(date -u "+%Y-%m-%d %H:%M:%S")"
+          echo "::set-output name=date::$(TZ="Australia/Melbourne" date -u "+%Y-%m-%d %H:%M:%S")"
       - run: |
           git tag --delete latest || true
           git tag latest
