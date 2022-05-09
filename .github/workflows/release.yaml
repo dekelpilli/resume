@@ -26,6 +26,7 @@ jobs:
           TZ: Australia/Melbourne
           DEBIAN_FRONTEND: noninteractive
       - run: |
+          gh release delete -y latest
           git tag --delete latest || true
           git tag latest
       - uses: softprops/action-gh-release@v1
