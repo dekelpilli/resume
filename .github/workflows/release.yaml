@@ -30,8 +30,8 @@ jobs:
       - run: |
           gh release delete -y latest || true
           git tag --delete latest || true
-          git tag latest
           git push --tags
+          git tag latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: softprops/action-gh-release@v1
