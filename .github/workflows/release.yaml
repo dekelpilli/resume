@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: dante-ev/latex-action@latest
         with:
           root_file: resume.tex
@@ -26,7 +28,6 @@ jobs:
           TZ: Australia/Melbourne
           DEBIAN_FRONTEND: noninteractive
       - run: |
-          git tag list
           gh release delete -y latest || true
           git tag --delete latest || true
           git tag latest
