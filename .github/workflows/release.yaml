@@ -29,8 +29,7 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
       - run: |
           gh release delete -y latest || true
-          git tag --delete latest || true
-          git push --tags
+          git push --delete origin latest || true
           git tag latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
