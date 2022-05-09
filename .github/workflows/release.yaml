@@ -29,6 +29,8 @@ jobs:
           gh release delete -y latest
           git tag --delete latest || true
           git tag latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: softprops/action-gh-release@v1
         with:
           name: ${{ steps.date.outputs.date }}
