@@ -24,10 +24,7 @@ jobs:
         env:
           TZ: Australia/Melbourne
           DEBIAN_FRONTEND: noninteractive
-      - run: |
-          gh release delete -y latest || true
-          git push --delete origin latest || true
-          git tag latest
+      - run: git push --delete origin latest || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: softprops/action-gh-release@v1
