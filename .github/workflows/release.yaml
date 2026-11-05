@@ -4,30 +4,31 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build-resume-pdf:
     name: build-resume-pdf
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: dante-ev/latex-action@latest
-        with:
-          root_file: resume.tex
-      - uses: actions/upload-artifact@v3
+      - uses: typst-community/setup-typst@v5
+      - run: typst compile resume.typ resume.pdf
+      - uses: actions/upload-artifact@v7
         with:
           name: resume
           path: resume.pdf
       - id: date
-        run: echo "::set-output name=date::$(date "+%Y-%m-%dT%H:%M:%S")"
+        run: echo "date=$(date '+%Y-%m-%dT%H:%M:%S')" >> "$GITHUB_OUTPUT"
         env:
           TZ: Australia/Melbourne
-          DEBIAN_FRONTEND: noninteractive
-      - run: git push --delete origin latest || true
+      - run: gh release delete latest --cleanup-tag --yes || true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: softprops/action-gh-release@v1
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: softprops/action-gh-release@v3
         with:
           name: ${{ steps.date.outputs.date }}
           tag_name: latest

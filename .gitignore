@@ -1,10 +1,2 @@
-resume.html
-*.log
-*.synctex.*
-*.aux
-*.fdb_latexmk
-*.fls
-*.gz
-.DS_Store
 *.pdf
-*.dvi
+.DS_Store
